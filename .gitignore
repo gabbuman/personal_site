@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS / IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Logs / local PGN dumps
+*.log
+*.pgn
+*.pgn.gz
+
+# gstack tooling
+.gstack/
+
+# local editor / agent config
+.claude/
