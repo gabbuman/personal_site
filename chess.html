@@ -3,40 +3,55 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Play me · Shubh Mall</title>
-  <meta name="description" content="A chess bot that opens with Shubh Mall's real chess.com repertoire, then hands off to Stockfish." />
+  <title>Play me in chess · Shubh Mall</title>
+  <meta name="description" content="A chess bot that opens with Shubh Mall's real chess.com repertoire, then hands off to Stockfish. Runs entirely in the browser." />
   <link rel="icon" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-  <main class="wrap chess-wrap">
-    <a class="back fade d1" href="index.html">← back</a>
-    <section class="chess-head fade d2">
-      <p class="label">Play me</p>
+  <header class="nav scrolled">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Shubh Mall<span class="dot">.</span></a>
+      <nav class="nav-links">
+        <a href="index.html#work">work</a>
+        <a href="index.html#skills">skills</a>
+        <a href="index.html" class="cta">← back home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="play-main">
+    <section class="play-head">
+      <span class="eyebrow">Side project</span>
       <h1>A bot that opens like I do.</h1>
       <p>
         Every opening move is weighted by how often I actually play it across
-        8,000+ games on chess.com, so expect a lot of <em>b3</em>. Once we're
-        out of my book, Stockfish takes the wheel. You're White.
+        8,000+ games on chess.com, so expect a lot of <em>b3</em>. Once we leave
+        my book, Stockfish takes the wheel. You play White.
       </p>
     </section>
 
-    <div class="board-frame fade d3">
+    <div class="board-frame">
       <div id="board"></div>
       <div class="controls">
         <span id="status">loading…</span>
         <div class="side-row">
-          <button class="btn" id="undo">undo</button>
-          <button class="btn" id="new-white">new (white)</button>
-          <button class="btn" id="new-black">new (black)</button>
+          <button class="cbtn" id="undo">undo</button>
+          <button class="cbtn" id="new-white">new · white</button>
+          <button class="cbtn" id="new-black">new · black</button>
         </div>
       </div>
     </div>
   </main>
-  <footer>opening book built from my real games · Stockfish for the middlegame</footer>
+
+  <footer class="foot" style="margin-top:4rem">
+    <div class="container">
+      <p class="foot-fine">Opening book built from my real games · Stockfish for the middlegame · 100% client-side</p>
+    </div>
+  </footer>
 
   <script type="module" src="assets/chess-game.js"></script>
 </body>

@@ -3,33 +3,245 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shubh Mall</title>
-  <meta name="description" content="Shubh Mall, software engineer. Firmware, data pipelines, and a chess bot trained on my own games." />
+  <title>Shubh Mall · Software Engineer</title>
+  <meta name="description" content="Shubh Mall, software and data engineer in Burnaby, BC. Data pipelines, manufacturing automation, and internal tooling for fleets of connected hardware." />
   <link rel="icon" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-  <main class="wrap">
-    <section class="intro">
-      <p class="label fade d1">Shubh Mall · Burnaby, BC</p>
-      <h1 class="fade d2">I build software in the gap between <em>hardware</em> and <em>people</em>.</h1>
-      <p class="lede fade d3">
-        Firmware on power inverters, data pipelines for a device fleet,
-        the internal tools that sit between the engineers shipping a thing
-        and the people actually using it. Mostly <strong>Python</strong>, some
-        of everything else.
-      </p>
-      <nav class="links fade d4">
-        <a class="go" href="chess.html">play me in chess ♟</a>
-        <a href="Resume_Shubh_Mall.pdf">résumé</a>
-        <a href="mailto:mall.shubhkumar@gmail.com">email</a>
-        <a href="https://www.chess.com/member/mesukatchess1" target="_blank" rel="noreferrer">chess.com</a>
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top">Shubh Mall<span class="dot">.</span></a>
+      <nav class="nav-links">
+        <a href="#work">work</a>
+        <a href="#skills">skills</a>
+        <a href="#education">education</a>
+        <a href="chess.html" class="cta">play chess ↗</a>
       </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow reveal">Software &amp; Data Engineer · Burnaby, BC</p>
+        <h1 class="reveal">
+          Shubh Mall
+          <span class="role">Building reliable systems for connected hardware.</span>
+        </h1>
+        <p class="tagline reveal">
+          I build <b>data pipelines</b>, <b>manufacturing automation</b>, and the
+          <b>internal tooling</b> that keeps fleets of connected devices running in
+          production. Currently engineering data and diagnostics for 200+ solar
+          inverters at <b>Schneider Electric</b>.
+        </p>
+        <div class="hero-actions reveal">
+          <a class="btn primary" href="#work">View work</a>
+          <a class="btn ghost" href="Resume_Shubh_Mall.pdf" target="_blank" rel="noreferrer">Résumé ↗</a>
+        </div>
+        <div class="hero-meta reveal">
+          <span><b>Now</b> Schneider Electric</span>
+          <span><b>Focus</b> Data · Automation · Firmware</span>
+          <span><b>Email</b> mall.shubhkumar@gmail.com</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">01 · Experience</span>
+          <h2>Where I've shipped.</h2>
+        </div>
+
+        <article class="role reveal">
+          <div class="role-top">
+            <h3>Schneider Electric</h3>
+            <span class="when">Aug 2023 – Present</span>
+          </div>
+          <div class="meta">Software / Data Engineer <span class="place">· Richmond, BC</span></div>
+          <ul>
+            <li>Designed a <b>Databricks medallion pipeline</b> delivering fleet-wide insights for 200+ solar inverters, surfacing real-time Power BI dashboards for operations, engineering, and executives.</li>
+            <li>Shipped <b>CI/CD with dev/prod separation</b> (GitHub Actions) and passed internal cybersecurity review for production release.</li>
+            <li>Built Python <b>manufacturing automation</b> across 11 stages, firmware flashing, factory config, cloud provisioning, and burn-in, cutting manual input <b>96%</b> and lifting line throughput <b>50%</b>.</li>
+            <li>Engineered a <b>System Diagnostics app</b> (Python/Tkinter) using Paramiko SSH over an Azure WireGuard VPN to reach IoT devices behind NAT, cutting diagnostics time <b>50%</b>.</li>
+            <li>Led a Wi-Fi optimization effort that reduced fleet-wide no-data sites from <b>6.1% to 0.7%</b> (137 sites), owned end to end outside the standard release cycle.</li>
+          </ul>
+        </article>
+
+        <article class="role reveal">
+          <div class="role-top">
+            <h3>Xantrex Technology Inc.</h3>
+            <span class="when">May 2022 – Aug 2023</span>
+          </div>
+          <div class="meta">Embedded Firmware Engineer <span class="place">· Burnaby, BC</span></div>
+          <ul>
+            <li>Engineered <b>dual-band Wi-Fi</b> (2.4/5GHz) with intelligent band selection and country-code configuration for reliable connectivity on Raspberry Pi power inverters.</li>
+            <li>Developed <b>udev rules</b> for kiosk touchscreens, automating cursor hiding, input detection, and Chromium lifecycle management for power saving.</li>
+            <li>Managed a <b>Jenkins CI pipeline</b> producing clean Raspberry Pi production builds across multiple repositories through candidate releases.</li>
+            <li>Authored and ran <b>regression test plans</b>, resolving bugs through root-cause analysis in a high-voltage AC/DC electronics lab.</li>
+          </ul>
+        </article>
+
+        <div class="metrics reveal">
+          <div class="metric"><div class="n">96<span>%</span></div><div class="l">manual input removed from the production line</div></div>
+          <div class="metric"><div class="n">50<span>%</span></div><div class="l">throughput gain on the factory floor</div></div>
+          <div class="metric"><div class="n">137</div><div class="l">offline sites brought back online</div></div>
+          <div class="metric"><div class="n">200<span>+</span></div><div class="l">inverters in the live fleet</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">02 · Toolkit</span>
+          <h2>Technologies I work with.</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-cat reveal">
+            <div class="cat-label"><span class="idx">/</span> Languages</div>
+            <div class="chips">
+              <span class="chip">Python</span><span class="chip">SQL</span>
+              <span class="chip">TypeScript</span><span class="chip">C / C++</span>
+              <span class="chip">Bash</span>
+            </div>
+          </div>
+          <div class="skill-cat reveal">
+            <div class="cat-label"><span class="idx">/</span> Platforms &amp; Data</div>
+            <div class="chips">
+              <span class="chip">Databricks</span><span class="chip">Azure</span>
+              <span class="chip">Power BI</span><span class="chip">Linux</span>
+              <span class="chip">PySpark</span><span class="chip">Pandas</span>
+            </div>
+          </div>
+          <div class="skill-cat reveal">
+            <div class="cat-label"><span class="idx">/</span> Frameworks &amp; Libraries</div>
+            <div class="chips">
+              <span class="chip">React</span><span class="chip">Django</span>
+              <span class="chip">Tkinter</span><span class="chip">Paramiko</span>
+              <span class="chip">REST APIs</span>
+            </div>
+          </div>
+          <div class="skill-cat reveal">
+            <div class="cat-label"><span class="idx">/</span> Tools &amp; DevOps</div>
+            <div class="chips">
+              <span class="chip">Docker</span><span class="chip">GitHub Actions</span>
+              <span class="chip">Jenkins</span><span class="chip">Git</span>
+              <span class="chip">OpenSSL</span>
+            </div>
+          </div>
+          <div class="skill-cat reveal">
+            <div class="cat-label"><span class="idx">/</span> Protocols</div>
+            <div class="chips">
+              <span class="chip">Modbus</span><span class="chip">CAN</span>
+              <span class="chip">OCPP</span><span class="chip">WireGuard</span>
+              <span class="chip">SSH / SFTP</span><span class="chip">OAuth</span>
+              <span class="chip">WebDAV</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">03 · Education</span>
+          <h2>Foundations.</h2>
+        </div>
+        <div class="edu reveal">
+          <div>
+            <h3>Simon Fraser University</h3>
+            <div class="sub">B.A.Sc. Computer Science <span class="extra">· Dota 2 Esports Captain · Soccer Captain</span></div>
+          </div>
+          <span class="when">Apr 2024 · Burnaby, BC</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHESS -->
+    <section class="section" id="chess">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">04 · For fun</span>
+          <h2>A side project that plays like me.</h2>
+        </div>
+        <div class="chess-cta reveal">
+          <div>
+            <h3>Play me in chess.</h3>
+            <p>
+              A browser bot trained on 8,000+ of my real chess.com games. It opens
+              with my actual repertoire, then hands off to Stockfish. Runs fully
+              client-side, no server.
+            </p>
+            <a class="btn primary" href="chess.html">Play the bot →</a>
+          </div>
+          <div class="mini-board" id="mini-board" aria-hidden="true"></div>
+        </div>
+      </div>
     </section>
   </main>
-  <footer>made with a little help from AI · 2026</footer>
+
+  <!-- FOOTER -->
+  <footer class="foot" id="contact">
+    <div class="container">
+      <div class="foot-grid">
+        <h2>Let's build something.<br/><a href="mailto:mall.shubhkumar@gmail.com">mall.shubhkumar@gmail.com</a></h2>
+        <div class="foot-links">
+          <a href="https://www.linkedin.com/in/shubh-mall" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/gabbuman" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="Resume_Shubh_Mall.pdf" target="_blank" rel="noreferrer">Résumé</a>
+          <a href="chess.html">Chess</a>
+        </div>
+      </div>
+      <p class="foot-fine">© 2026 Shubh Mall · Built static, deployed on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script>
+    // nav border on scroll
+    const nav = document.getElementById('nav');
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+    onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+    // reveal on scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+    // scroll-spy: highlight the nav link for the section in view
+    const spyLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          const id = '#' + e.target.id;
+          spyLinks.forEach((a) => a.classList.toggle('active', a.getAttribute('href') === id));
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    ['work', 'skills', 'education'].forEach((id) => {
+      const el = document.getElementById(id); if (el) spy.observe(el);
+    });
+
+    // decorative mini chessboard (checker pattern)
+    const mb = document.getElementById('mini-board');
+    if (mb) {
+      for (let r = 0; r < 8; r++) for (let c = 0; c < 8; c++) {
+        const i = document.createElement('i');
+        i.className = (r + c) % 2 === 0 ? 'l' : 'd';
+        mb.appendChild(i);
+      }
+    }
+  </script>
 </body>
 </html>
